@@ -18,3 +18,11 @@ if ("serviceWorker" in navigator) {
         .catch(err => console.log("service worker not registered", err))
     })
   }
+
+ 
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register (
+      '/PWA/serviceWorker.js',
+      {scope: '/PWA/'}
+    )
+  }

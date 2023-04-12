@@ -30,9 +30,5 @@ export default {
 </script>
 
 <template>
-    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh">
-        <div>
-        <h1 class="text-center">SOS</h1>
-        </div>
-    </div>
+  <h1>SOS</h1>
 </template>

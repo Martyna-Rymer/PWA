@@ -1,5 +1,18 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from 'vue-router'
+export default {
+    methods: {
+      hideMenu() {
+        const navbar = document.querySelector('.navbar-collapse')
+        navbar.classList.remove('show')
+      }
+    },
+    mounted() {
+      this.$router.afterEach((to, from) => {
+        this.hideMenu()
+      })
+    }
+  }
 </script>
 
 <template>
@@ -18,18 +31,18 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
        <ul class="navbar-nav">
         <li class="nav-item active">
-          <router-link to="/" class="nav-link" active-class="active-link">Dane autorów</router-link>
+          <router-link to="/" class="nav-link" active-class="active-link" @click="hideMenu">Dane autorów</router-link>
         </li>
         <li class="nav-item active">
-          <router-link to="/map" class="nav-link" active-class="active-link">Mapa</router-link>
+          <router-link to="/map" class="nav-link" active-class="active-link" @click="hideMenu">Mapa</router-link>
         </li>
         <li class="nav-item active">
-          <router-link to="/sos" class="nav-link" active-class="active-link">SOS</router-link>
+          <router-link to="/sos" class="nav-link" active-class="active-link" @click="hideMenu">SOS</router-link>
         </li>
        </ul>
       </div>
     </nav>
-
+    
     <div class="container">
       <RouterView />
     </div>

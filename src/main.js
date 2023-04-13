@@ -13,16 +13,11 @@ app.mount('#app')
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
       navigator.serviceWorker
-        .register("/serviceWorker.js")
+      navigator.serviceWorker.register (
+        '/PWA/serviceWorker.js',
+        {scope: '/PWA/'}
+      )
         .then(res => console.log("service worker registered"))
         .catch(err => console.log("service worker not registered", err))
     })
-  }
-
- 
-  if (navigator.serviceWorker) {
-    navigator.serviceWorker.register (
-      '/PWA/serviceWorker.js',
-      {scope: '/PWA/'}
-    )
   }

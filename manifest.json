@@ -9,12 +9,12 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "/assets/512x512.png",
+        "src": "/src/assets/512x512.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/assets/192x192.png",
+        "src": "/src//assets/192x192.png",
         "sizes": "192x192",
         "type": "image/png"
       }

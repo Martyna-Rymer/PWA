@@ -2,7 +2,7 @@
     "name": "PWA",
     "short_name": "PWA",
     "description": "Progressive Web App",
-    "scope": "/PWA/",
+    "scope": "https://github.com/Martyna-Rymer/PWA/",
     "start_url": "/PWA/index.html",
     "background_color": "#ffffff",
     "theme_color": "#83A6FF",
